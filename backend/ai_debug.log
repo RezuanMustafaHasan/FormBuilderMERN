@@ -188,3 +188,623 @@ TYPE: RESPONSE [suggest-questions]
   "rawText": "[{\"label\":\"Full Name\",\"type\":\"SHORT_TEXT\",\"required\":true},{\"label\":\"Email Address\",\"type\":\"EMAIL\",\"required\":true},{\"label\":\"In which area would you prefer to volunteer?\",\"type\":\"CHECKBOXES\",\"required\":true,\"options\":[\"Event Logistics\",\"Technical Troubleshooting\",\"Exhibitor Support\",\"Attendee Registration\"]},{\"label\":\"Please describe any relevant experience or technical skills you possess\",\"type\":\"LONG_TEXT\",\"required\":false},{\"label\":\"What is your T-shirt size for the volunteer uniform?\",\"type\":\"DROPDOWN\",\"required\":true,\"options\":[\"Small\",\"Medium\",\"Large\",\"X-Large\",\"XX-Large\"]}]"
 }
 ================================================================
+
+================================================================
+TIMESTAMP: 2026-01-04T15:29:25.778Z
+TYPE: REQUEST [suggest-details]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "I want to create a form about: Project idea submission for CSE undergrad students. JAVA spring boot.. Give me a title and a description.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "title": {
+          "type": "STRING"
+        },
+        "description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-04T15:29:29.213Z
+TYPE: RESPONSE [suggest-details]
+----------------------------------------------------------------
+{
+  "responseObj": {
+    "sdkHttpResponse": {
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-encoding": "gzip",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Sun, 04 Jan 2026 15:29:27 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "server-timing": "gfet4t7; dur=3019",
+        "transfer-encoding": "chunked",
+        "vary": "Origin, X-Origin, Referer",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0"
+      }
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\"title\":\"Java Spring Boot Project Proposal Submission\",\"description\":\"This form is designed for Computer Science and Engineering undergraduate students to submit their innovative project ideas using the Java Spring Boot framework. Please include details about the project scope, problem statement, and intended features.\"}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "VodaaZysNKfmjuMPxbbWgAY",
+    "usageMetadata": {
+      "promptTokenCount": 29,
+      "candidatesTokenCount": 52,
+      "totalTokenCount": 417,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 29
+        }
+      ],
+      "thoughtsTokenCount": 336
+    }
+  },
+  "rawText": "{\"title\":\"Java Spring Boot Project Proposal Submission\",\"description\":\"This form is designed for Computer Science and Engineering undergraduate students to submit their innovative project ideas using the Java Spring Boot framework. Please include details about the project scope, problem statement, and intended features.\"}"
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-04T15:29:29.233Z
+TYPE: REQUEST [suggest-questions]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "Create 5 relevant form questions for a form titled \"Java Spring Boot Project Proposal Submission\" with description \"This form is designed for Computer Science and Engineering undergraduate students to submit their innovative project ideas using the Java Spring Boot framework. Please include details about the project scope, problem statement, and intended features.\". Include varied types like short text, multiple choice, and email.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "label": {
+            "type": "STRING"
+          },
+          "type": {
+            "type": "STRING",
+            "enum": [
+              "SHORT_TEXT",
+              "LONG_TEXT",
+              "MULTIPLE_CHOICE",
+              "EMAIL",
+              "NUMBER",
+              "CHECKBOXES",
+              "DROPDOWN",
+              "DATE",
+              "TIME"
+            ]
+          },
+          "options": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "required": {
+            "type": "BOOLEAN"
+          }
+        },
+        "required": [
+          "label",
+          "type",
+          "required"
+        ]
+      }
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-04T15:29:33.800Z
+TYPE: RESPONSE [suggest-questions]
+----------------------------------------------------------------
+{
+  "responseObj": {
+    "sdkHttpResponse": {
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-encoding": "gzip",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Sun, 04 Jan 2026 15:29:31 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "server-timing": "gfet4t7; dur=4400",
+        "transfer-encoding": "chunked",
+        "vary": "Origin, X-Origin, Referer",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0"
+      }
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "[{\"label\":\"Student Email Address\",\"type\":\"EMAIL\",\"required\":true},{\"label\":\"Project Title\",\"type\":\"SHORT_TEXT\",\"required\":true},{\"label\":\"Detailed Problem Statement and Project Scope\",\"type\":\"LONG_TEXT\",\"required\":true},{\"label\":\"Primary Database Selection\",\"type\":\"MULTIPLE_CHOICE\",\"required\":true,\"options\":[\"MySQL\",\"PostgreSQL\",\"MongoDB\",\"H2 Database\",\"MariaDB\"]},{\"label\":\"Planned Spring Boot Features\",\"type\":\"CHECKBOXES\",\"required\":true,\"options\":[\"Spring Security with JWT\",\"RESTful API Development\",\"Microservices Architecture\",\"Spring Data JPA\",\"WebSocket Support\",\"Spring Cloud Config\"]}]",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "W4daaZC7F56X4-EPt6md6QY",
+    "usageMetadata": {
+      "promptTokenCount": 74,
+      "candidatesTokenCount": 129,
+      "totalTokenCount": 713,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 74
+        }
+      ],
+      "thoughtsTokenCount": 510
+    }
+  },
+  "rawText": "[{\"label\":\"Student Email Address\",\"type\":\"EMAIL\",\"required\":true},{\"label\":\"Project Title\",\"type\":\"SHORT_TEXT\",\"required\":true},{\"label\":\"Detailed Problem Statement and Project Scope\",\"type\":\"LONG_TEXT\",\"required\":true},{\"label\":\"Primary Database Selection\",\"type\":\"MULTIPLE_CHOICE\",\"required\":true,\"options\":[\"MySQL\",\"PostgreSQL\",\"MongoDB\",\"H2 Database\",\"MariaDB\"]},{\"label\":\"Planned Spring Boot Features\",\"type\":\"CHECKBOXES\",\"required\":true,\"options\":[\"Spring Security with JWT\",\"RESTful API Development\",\"Microservices Architecture\",\"Spring Data JPA\",\"WebSocket Support\",\"Spring Cloud Config\"]}]"
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:53:09.158Z
+TYPE: REQUEST [suggest-details]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "I want to create a form about: Create a form for Submitting Idea for Web Development project in undergrad computer science program.. Give me a title and a description.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "title": {
+          "type": "STRING"
+        },
+        "description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:53:09.787Z
+TYPE: REQUEST [suggest-questions]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "Create 5 relevant form questions for a form titled \"Create a form for Submitting Idea for Web Development project in undergrad computer science program.\" with description \"Automated description generation failed.\". Include varied types like short text, multiple choice, and email.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "label": {
+            "type": "STRING"
+          },
+          "type": {
+            "type": "STRING",
+            "enum": [
+              "SHORT_TEXT",
+              "LONG_TEXT",
+              "MULTIPLE_CHOICE",
+              "EMAIL",
+              "NUMBER",
+              "CHECKBOXES",
+              "DROPDOWN",
+              "DATE",
+              "TIME"
+            ]
+          },
+          "options": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "required": {
+            "type": "BOOLEAN"
+          }
+        },
+        "required": [
+          "label",
+          "type",
+          "required"
+        ]
+      }
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:53:24.459Z
+TYPE: REQUEST [suggest-details]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "I want to create a form about: Create a form for Submitting Idea for Web Development project in undergrad computer science program.. Give me a title and a description.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "title": {
+          "type": "STRING"
+        },
+        "description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:53:24.884Z
+TYPE: REQUEST [suggest-questions]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "Create 5 relevant form questions for a form titled \"Create a form for Submitting Idea for Web Development project in undergrad computer science program.\" with description \"Automated description generation failed.\". Include varied types like short text, multiple choice, and email.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "label": {
+            "type": "STRING"
+          },
+          "type": {
+            "type": "STRING",
+            "enum": [
+              "SHORT_TEXT",
+              "LONG_TEXT",
+              "MULTIPLE_CHOICE",
+              "EMAIL",
+              "NUMBER",
+              "CHECKBOXES",
+              "DROPDOWN",
+              "DATE",
+              "TIME"
+            ]
+          },
+          "options": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "required": {
+            "type": "BOOLEAN"
+          }
+        },
+        "required": [
+          "label",
+          "type",
+          "required"
+        ]
+      }
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:56:50.338Z
+TYPE: REQUEST [suggest-details]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "I want to create a form about: Create a form for Submitting Idea for Web Development project in undergrad computer science program.. Give me a title and a description.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "title": {
+          "type": "STRING"
+        },
+        "description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:56:50.635Z
+TYPE: REQUEST [suggest-questions]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "Create 5 relevant form questions for a form titled \"Create a form for Submitting Idea for Web Development project in undergrad computer science program.\" with description \"Automated description generation failed.\". Include varied types like short text, multiple choice, and email.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "label": {
+            "type": "STRING"
+          },
+          "type": {
+            "type": "STRING",
+            "enum": [
+              "SHORT_TEXT",
+              "LONG_TEXT",
+              "MULTIPLE_CHOICE",
+              "EMAIL",
+              "NUMBER",
+              "CHECKBOXES",
+              "DROPDOWN",
+              "DATE",
+              "TIME"
+            ]
+          },
+          "options": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "required": {
+            "type": "BOOLEAN"
+          }
+        },
+        "required": [
+          "label",
+          "type",
+          "required"
+        ]
+      }
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:57:11.093Z
+TYPE: REQUEST [suggest-details]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "I want to create a form about: Create a form for Submitting Idea for Web Development project in undergrad computer science program.\n. Give me a title and a description.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "title": {
+          "type": "STRING"
+        },
+        "description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:57:14.401Z
+TYPE: RESPONSE [suggest-details]
+----------------------------------------------------------------
+{
+  "responseObj": {
+    "sdkHttpResponse": {
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-encoding": "gzip",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Thu, 08 Jan 2026 20:57:14 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "server-timing": "gfet4t7; dur=3019",
+        "transfer-encoding": "chunked",
+        "vary": "Origin, X-Origin, Referer",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0"
+      }
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\"title\":\"Undergraduate Web Development Project Proposal Form\",\"description\":\"Use this form to submit your ideas for the Web Development project. Please provide details regarding the project scope, intended technology stack, and primary features to be implemented.\"}",
+              "thoughtSignature": "EskLCsYLAXLI2nxwz8mhM02tqFEHY6Flm8dyQ/VGa8Reen6yL6CoP/M6ZLQfCCJMzpcV5OwJZ3O9rk+uFB7VL9luTlWuO4PWEt5ce2hfwi7roKhXzdnn/fHkeWC0ZAPwTZPpcCmyOfdIZSlgaAa1lWplwB53r4CX7YENBU8UeTXBYnUkbEsFs3X1XjZOjGH0bs8Luw4ZMr4tiwTGMTYhpoYpivk8Ey6xdjRSgYyKFElix929qKljEo6LIsxaYQl+XiWUqrWtZMz2cvhPCwHXPJinPi/sigRrKLE7+tK1VCV+LI3zhPemMFLv9g8UsXIFxTyAqC38qjKNrQ4Da+4pxQhLg6AY0ZUc6Ra4FrBfX7G4XyS7UlbwRjOFD49jFanBvkD6rmEXIDrwjn3wmBbGkeJmvV1Cpf8kRPgR7ZcwIaefVRSWt6WAu9yNFk5F+eQCpAs8j3tStLlcZOuLH/p8ZJHR6vRc9tiPS1PaWpMcD4MpOBWBDqZlxYiR5JlUc/7yy00B1rJqav8chXjk2lj5EPC+c+c1bsiadNHgP33a+RQfntmWBdYVhoQW01C8LgiLikDW78YeRBi30N+bbDDKpfkN6Y5ppzkgTfroxMMDfmfy73Nwh7ptNw7WKvZzaA1TqEpNG66N7kX6mpc4hvHYAjtPVMimdaMheqt+dnsHdOUW1hHNg5US30OL+JfSaA60g44Yme3tyt8sKTxZb/F7FW/hxt9S+t//Ko2Pstpa+BqpT8M3HmxkVYLm7+pTqc3SDtj21m0HubcS8gGthJ75vSWg0Ccyn0m1jOBz9+uYTt/flXtkDDuxcy+N8Akdu2XAY9Pm5di/vfl9f1mIo21IsEXg4WDwCTPILzO0ODgK52TOgzpX6SXLGMeVrpz6TPlsQQmFzGvoOd00cILxDHJX3sq/5n0Jwu2Y+LxckeRXC71+V86q0mSo0n1R/qzSsA+9ONmrE5p0W7qXZirUf8pMpBoWNuUOWPTeWilAQwfHl/V9+bBh+YRkhn2MYkLOsoDUnm/HYv4l6dNfWGKFPfU1nb9rcROlLGTA8LW5yFIKjoOH3HTXeLmZkt+FQdrZbjjrYKVk6cKuOK2p8NGfSL55U9uYRKrT5+AMsNCEjKwv7vszxtSeG/AhOhZi7fnHxilJpHeqNBOhEeS3oYwvN/zMAuwws+4OYro2sKirHogUgI0kCuOc1EgizFmMJvkBF9nkaSf4lg/mWtF35W6QBjJ4Jm+iNLz/d+ma9FKU78YJ2EOsbem4fiOACWPq73pUtLbA8tLWE8Gds7S2vQdNwkDrcFYapxJhOYwrP1nGo4VqeqhOGrnM4zj/nMjx2/MxR2SyErwq8K9/aCKv9Y+mtP5gHRBBDV9hggyLOhv0Y4OQmFQkiQgnrruj03gAsD4rlxmL5fPJSwjZ8M8cUFVxLXqmDE4uDkVMj3N6mdXmH7amn2beT346+5T0l0qj7B6XbIV3faOcs+5Fo054czjoU88BzpGHJ3dPmShw5NrcsxkVAz5ZxZzMI7yS/bu+yqtBsNhO8F8Bdm1clm4Ot+om3MleUndWmUu66K2J9ktJ647pM3ii95L+CBqU32rZ71U2Qh81jcGb9qO4k4ufQDxfUPqXyR8lIcCWi30Q0gtCX+jzBJNsBvgsWSb3azx4jCSx/8O6Cuiob4EeFdRv6rbsA0jGnYqZEg0Wf2zIo2TvO8zPBU5c+OhI01XzVl+GImEc9LKF+xvMY2ZlWAtuLJqgdLMBljwjgOmMEYwEm6ulpdpuOrxFQOuC//tFlRE79PmeuskETeGVLM7xGo5E252W88Rca21tuTSPKAdz9L/+/HlRBDVvtGCpIKDTxBN710Dr1ljeiS1SmbC9hl9PxDkcCPVyrRfkPSGLIexTRma6bXsXMYecY1rKkoCt7QhiKSE1VP40Ch3bGyp7g581eDPavwjHZ3+PJqN2rl25MikOKMEd9zvjX/ZwH1gq6JI6Xg0="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "KhpgadvmDJfC4-EPj7yz6AE",
+    "usageMetadata": {
+      "promptTokenCount": 36,
+      "candidatesTokenCount": 46,
+      "totalTokenCount": 387,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 36
+        }
+      ],
+      "thoughtsTokenCount": 305
+    }
+  },
+  "rawText": "{\"title\":\"Undergraduate Web Development Project Proposal Form\",\"description\":\"Use this form to submit your ideas for the Web Development project. Please provide details regarding the project scope, intended technology stack, and primary features to be implemented.\"}"
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:57:14.422Z
+TYPE: REQUEST [suggest-questions]
+----------------------------------------------------------------
+{
+  "model": "gemini-3-flash-preview",
+  "contents": "Create 5 relevant form questions for a form titled \"Undergraduate Web Development Project Proposal Form\" with description \"Use this form to submit your ideas for the Web Development project. Please provide details regarding the project scope, intended technology stack, and primary features to be implemented.\". Include varied types like short text, multiple choice, and email.",
+  "config": {
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "label": {
+            "type": "STRING"
+          },
+          "type": {
+            "type": "STRING",
+            "enum": [
+              "SHORT_TEXT",
+              "LONG_TEXT",
+              "MULTIPLE_CHOICE",
+              "EMAIL",
+              "NUMBER",
+              "CHECKBOXES",
+              "DROPDOWN",
+              "DATE",
+              "TIME"
+            ]
+          },
+          "options": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "required": {
+            "type": "BOOLEAN"
+          }
+        },
+        "required": [
+          "label",
+          "type",
+          "required"
+        ]
+      }
+    }
+  }
+}
+================================================================
+
+================================================================
+TIMESTAMP: 2026-01-08T20:57:18.750Z
+TYPE: RESPONSE [suggest-questions]
+----------------------------------------------------------------
+{
+  "responseObj": {
+    "sdkHttpResponse": {
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-encoding": "gzip",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Thu, 08 Jan 2026 20:57:18 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "server-timing": "gfet4t7; dur=4264",
+        "transfer-encoding": "chunked",
+        "vary": "Origin, X-Origin, Referer",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0"
+      }
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "[{\"label\":\"Student Email Address\",\"type\":\"EMAIL\",\"required\":true},{\"label\":\"Proposed Project Title\",\"type\":\"SHORT_TEXT\",\"required\":true},{\"label\":\"Primary Technology Stack\",\"type\":\"MULTIPLE_CHOICE\",\"required\":true,\"options\":[\"MERN Stack (MongoDB, Express, React, Node.js)\",\"LAMP Stack (Linux, Apache, MySQL, PHP)\",\"Django / Python\",\"ASP.NET Core / C#\",\"Vue.js / Firebase\"]},{\"label\":\"Project Scope and Primary Features\",\"type\":\"LONG_TEXT\",\"required\":true},{\"label\":\"Estimated Project Completion Date\",\"type\":\"DATE\",\"required\":true}]",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "Lhpgab2sHuOpjuMPl6jw6AE",
+    "usageMetadata": {
+      "promptTokenCount": 68,
+      "candidatesTokenCount": 130,
+      "totalTokenCount": 755,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 68
+        }
+      ],
+      "thoughtsTokenCount": 557
+    }
+  },
+  "rawText": "[{\"label\":\"Student Email Address\",\"type\":\"EMAIL\",\"required\":true},{\"label\":\"Proposed Project Title\",\"type\":\"SHORT_TEXT\",\"required\":true},{\"label\":\"Primary Technology Stack\",\"type\":\"MULTIPLE_CHOICE\",\"required\":true,\"options\":[\"MERN Stack (MongoDB, Express, React, Node.js)\",\"LAMP Stack (Linux, Apache, MySQL, PHP)\",\"Django / Python\",\"ASP.NET Core / C#\",\"Vue.js / Firebase\"]},{\"label\":\"Project Scope and Primary Features\",\"type\":\"LONG_TEXT\",\"required\":true},{\"label\":\"Estimated Project Completion Date\",\"type\":\"DATE\",\"required\":true}]"
+}
+================================================================
